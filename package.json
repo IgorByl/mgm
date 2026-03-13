@@ -1,0 +1,28 @@
+{
+  "name": "mgm",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "services/user-service",
+    "services/user-publication-service",
+    "services/notification-service",
+    "packages/shared"
+  ],
+  "scripts": {
+    "install:all": "yarn install",
+    "setup": "yarn install && yarn build",
+    "build": "yarn workspace @mgm/shared build && yarn workspace user-service build && yarn workspace user-publication-service build && yarn workspace notification-service build",
+    "docker:up": "docker compose up --build",
+    "docker:up:detached": "docker compose up --build -d",
+    "docker:down": "docker compose down -v --remove-orphans",
+    "logs:flow:macbook": "./scripts/logs-flow.sh",
+    "logs:user": "docker compose logs -f --tail=100 user-service",
+    "logs:publication": "docker compose logs -f --tail=100 user-publication-service",
+    "logs:notification": "docker compose logs -f --tail=100 notification-service",
+    "start:user": "yarn workspace user-service start",
+    "start:publication": "yarn workspace user-publication-service start",
+    "start:notification": "yarn workspace notification-service start",
+    "lint": "yarn workspace user-service lint && yarn workspace user-publication-service lint && yarn workspace notification-service lint"
+  }
+}

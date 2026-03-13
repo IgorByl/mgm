@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.dist
+.dist-cache
+dist
+.cache
+coverage
+# .env allowed for hometask presentation but should be ignored for security reasons
+.env.local
+.env.*.local
+.DS_Store
