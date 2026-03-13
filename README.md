@@ -179,3 +179,12 @@ yarn logs:notification      # notification-service logs
 - **Mongo transactions fail**: Ensure replica set is initialized (`mongo-init` should run once).
 - **Kafka not reachable**: Wait for Kafka to finish booting; check logs if services start too quickly.
 - **Rebuild after changes**: `docker compose up --build`.
+
+## Examples
+
+![list users request with pagination](https://github.com/user-attachments/assets/e86234be-c381-4c66-a541-548ffea31c4d)
+
+![health-check endpoint](https://github.com/user-attachments/assets/fc6682d9-f88d-436f-8a03-019e114390a5)
+
+![run example](https://github.com/user-attachments/assets/f9bdb9ef-2bd4-402c-8540-b87557c806de)
+
